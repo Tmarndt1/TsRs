@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1687388889239" clover="3.2.0">
+  <project timestamp="1687388889239" name="All files">
+    <metrics statements="24" coveredstatements="23" conditionals="5" coveredconditionals="4" methods="11" coveredmethods="10" elements="40" coveredelements="37" complexity="0" loc="24" ncloc="24" packages="1" files="2" classes="2"/>
+    <file name="Option.ts" path="C:\Users\tmarn\Projects\TsMonad\src\Option.ts">
+      <metrics statements="15" coveredstatements="15" conditionals="3" coveredconditionals="3" methods="8" coveredmethods="8"/>
+      <line num="6" count="1" type="stmt"/>
+      <line num="14" count="8" type="stmt"/>
+      <line num="23" count="1" type="stmt"/>
+      <line num="31" count="4" type="stmt"/>
+      <line num="39" count="11" type="stmt"/>
+      <line num="47" count="3" type="stmt"/>
+      <line num="56" count="3" type="cond" truecount="1" falsecount="0"/>
+      <line num="57" count="2" type="stmt"/>
+      <line num="59" count="1" type="stmt"/>
+      <line num="68" count="2" type="cond" truecount="1" falsecount="0"/>
+      <line num="69" count="1" type="stmt"/>
+      <line num="71" count="1" type="stmt"/>
+      <line num="81" count="2" type="cond" truecount="1" falsecount="0"/>
+      <line num="82" count="1" type="stmt"/>
+      <line num="84" count="1" type="stmt"/>
+    </file>
+    <file name="Result.ts" path="C:\Users\tmarn\Projects\TsMonad\src\Result.ts">
+      <metrics statements="9" coveredstatements="8" conditionals="2" coveredconditionals="1" methods="3" coveredmethods="2"/>
+      <line num="3" count="1" type="stmt"/>
+      <line num="7" count="3" type="stmt"/>
+      <line num="11" count="0" type="stmt"/>
+      <line num="15" count="3" type="cond" truecount="0" falsecount="1"/>
+      <line num="17" count="3" type="stmt"/>
+      <line num="19" count="3" type="stmt"/>
+      <line num="21" count="3" type="cond" truecount="1" falsecount="0"/>
+      <line num="22" count="1" type="stmt"/>
+      <line num="25" count="2" type="stmt"/>
+    </file>
+  </project>
+</coverage>

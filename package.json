@@ -1,0 +1,36 @@
+{
+  "name": "tsmonad",
+  "version": "1.0.0",
+  "description": "A Monad Typescript library",
+  "main": "index.js",
+  "directories": {
+    "example": "examples"
+  },
+  "scripts": {
+    "test": "jest",
+    "test:coverage": "npm test -- --coverage",
+    "test:badges": "npm run test:coverage && jest-coverage-badges",
+    "build": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Tmarndt1/TsMonad.git"
+  },
+  "author": "Travis Arndt",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Tmarndt1/TsMonad/issues"
+  },
+  "homepage": "https://github.com/Tmarndt1/TsMonad#readme",
+  "dependencies": {
+    "common-js": "^0.3.8",
+    "typescript": "^4.5.5"
+  },
+  "devDependencies": {
+    "@types/jest": "^27.4.1",
+    "jest": "^27.5.1",
+    "jest-coverage-badges": "^1.1.2",
+    "ts-jest": "^27.1.3",
+    "ts-node": "^10.7.0"
+  }
+}
