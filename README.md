@@ -75,9 +75,11 @@ const result = option.match(
 
 ### Option Use Case
 ```typescript
-let user: Option<User> = context.getUser(123);
+const option: Option<User> = context.getUser(123);
 
-if (user.isNone()) return;
+if (option.isNone()) return;
+
+const value: User = option.unwrap();
 
 // Handle business logic
 ```
