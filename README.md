@@ -1,5 +1,5 @@
 # TsRs
-A Monad Typescript library inspired by the Rust programming language.
+TsRs is a TypeScript library that brings the Result and Option monads from Rust to the TypeScript ecosystem.
 
 <!-- Tests: ![Jest Tests](https://img.shields.io/static/v1?label=tests&message=unknown&color=lightgrey)
 [![Coverage Status](https://coveralls.io/repos/github/tmarndt1/TsRs/badge.svg?branch=main)](https://coveralls.io/github/tmarndt1/TsRs?branch=main) -->
