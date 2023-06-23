@@ -15,9 +15,8 @@ A Monad Typescript library inspired by the Rust programming language.
 If you like or are using this project please give it a star. Thanks!
 
 ## Usage
-### Result Monad
+### Result Example
 ```typescript
-
 const monad = new Result<{stringCase: string, numberCase: number}>({ kind: "stringCase", value: "Hello world!"});
 	
 const result = monad.match({
@@ -26,21 +25,61 @@ const result = monad.match({
 });
 
 // result is Received string: Hello world!
-
 ```
 
-### Option Monad
+### Result Use Case
+```typescript
+import axios from 'axios';
+
+async function fetchUserData(userId: number): Promise<Result<{ success: UserData, invalid: string, error: string }>> {
+    try {
+        const response = await axios.get(`/api/users/${userId}`);
+
+        const userData: UserData = response.data;
+        
+        if (response.data.invalid) return new Result({ invalid: 'The user is invalid' });
+
+        return new Result({ kind: 'success', value: userData });
+    } catch (error) {
+        return new Result({ kind: 'error', value: error.message });
+    }
+}
+
+const result = await fetchUserData(123);
+
+result.match({
+    success: (userData) => {
+        console.log('User data:', userData);
+    },
+    invalid: (message) => {
+        console.log(message)
+    },
+    error: (error) => {
+        console.error('Error fetching user data:', error);
+    }
+});
+```
+
+### Option Example
 ```typescript
 
-const option = new Option(42);
+const option = new Option(21);
 
 const result = option.match(
     (value) => value * 2,
     () => 0
 );
 
-// result is 84
+// result is 42
+```
 
+### Option Use Case
+```typescript
+let user: Option<User> = context.getUser(123);
+
+if (user.isNone()) return;
+
+// Handle business logic
 ```
 
 ## Authors
