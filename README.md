@@ -1,10 +1,10 @@
-# TsMonad
+# TsRs
 A Monad Typescript library inspired by the Rust programming language.
 
 <!-- Tests: ![Jest Tests](https://img.shields.io/static/v1?label=tests&message=unknown&color=lightgrey)
-[![Coverage Status](https://coveralls.io/repos/github/tmarndt1/tsmonad/badge.svg?branch=main)](https://coveralls.io/github/tmarndt1/tsmonad?branch=main) -->
+[![Coverage Status](https://coveralls.io/repos/github/tmarndt1/TsRs/badge.svg?branch=main)](https://coveralls.io/github/tmarndt1/TsRs?branch=main) -->
 
-[![Main](https://github.com/Tmarndt1/TsMonad/actions/workflows/main.yml/badge.svg?branch=main)](https://github.com/Tmarndt1/TsMonad/actions/workflows/main.yml)
+[![Main](https://github.com/Tmarndt1/TsRs/actions/workflows/main.yml/badge.svg?branch=main)](https://github.com/Tmarndt1/TsRs/actions/workflows/main.yml)
 
 | Statements | Branches | Functions | Lines |
 | -----------|----------|-----------|-------|
