@@ -31,24 +31,33 @@ const result = monad.match({
 ```typescript
 import axios from 'axios';
 
-async function fetchUserData(userId: number): Promise<Result<{ success: UserData, invalid: string, error: string }>> {
+async function fetchUserData(userId: number): Promise<Result<{userData: IUserData, invalid: string, error: string}>> {
     try {
-        const response = await axios.get(`/api/users/${userId}`);
+        const response = await axios.get<{userData: IUserData, invalid: boolean}>(`/api/users/${userId}`);
 
-        const userData: UserData = response.data;
-        
-        if (response.data.invalid) return new Result({ invalid: 'The user is invalid' });
+        if (response.data.invalid) {
+            return new Result({ 
+                kind: 'invalid',
+                value: 'The user is invalid'
+            });
+        }
 
-        return new Result({ kind: 'success', value: userData });
+        return new Result({ 
+            kind: 'userData',
+            value: response.data
+        });
     } catch (error) {
-        return new Result({ kind: 'error', value: error.message });
+        return new Result({
+            kind: 'error',
+            value: error
+        });
     }
 }
 
 const result = await fetchUserData(123);
 
 result.match({
-    success: (userData) => {
+    userData: (userData) => {
         console.log('User data:', userData);
     },
     invalid: (message) => {
