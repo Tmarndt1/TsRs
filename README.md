@@ -33,7 +33,7 @@ import axios from 'axios';
 
 async function fetchUserData(userId: number): Promise<Result<{userData: IUserData, invalid: string, error: string}>> {
     try {
-        const response = await axios.get<{userData: IUserData, invalid: boolean}>(`/api/users/${userId}`);
+        const response = await axios.get<{userData: IUserData, invalid: boolean}>(`${baseUrl}/api/users/${userId}`);
 
         if (response.data.invalid) {
             return new Result({ 
